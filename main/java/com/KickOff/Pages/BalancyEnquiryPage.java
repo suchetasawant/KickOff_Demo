@@ -13,8 +13,7 @@ public class BalancyEnquiryPage extends mainBaseClass{
 		PageFactory.initElements(driver, this);
 	}
 
-
-	By BalancyEnquiry =By.xpath("//a[contains(text(),'Balance Enquiry')]");
+        By BalancyEnquiry =By.xpath("//a[contains(text(),'Balance Enquiry')]");
 	By AccountNo = By.xpath("//input[@name='accountno']");
 	By Submit = By.xpath("//input[@name='AccSubmit']");
 
