@@ -38,36 +38,6 @@ public mainBaseClass() {
 			}
 }
 
-//		
-//		public static void browserStack(String os, String browser , String version) {
-//			
-//			 String username = "suchetasawant_F5PfOh";
-//			 String password = "2NjryHDE61sVnAs4NnMs";
-//			 
-//			 WebDriverManager.chromedriver().setup();
-//			 URL url=null;
-//			 
-//			  try {
-//				url = new URL("https://" +  username + ":" + password + "@hub-cloud.browserstack.com/wd/hub");
-//			} catch (MalformedURLException e) {
-//				// TODO Auto-generated catch block
-//				e.printStackTrace();
-//			}
-//					  
-//		
-//		DesiredCapabilities caps = new DesiredCapabilities();
-//		
-//		caps.setCapability("os", os);
-//		caps.setCapability("os_version", "10");
-//		caps.setCapability("browser", browser);
-//		caps.setCapability("browser_version", version);
-//		caps.setCapability("browserstack.local", "false");
-//		caps.setCapability("browserstack.selenium_version", "3.5.2"); 
-//		
-//		driver = new RemoteWebDriver(url, caps);
-//		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
-//		
-
 
 			public static void openBrowser(String browserName) {
 
