@@ -15,7 +15,7 @@ import com.mainBaseClass.mainBaseClass;
 
 public class WithdrawalPageTest extends mainBaseClass{
 	
-	
+
 	LoginPage Page;
 	HomePage Page1;
 	mainBaseClass Page3 = new mainBaseClass();
@@ -23,12 +23,12 @@ public class WithdrawalPageTest extends mainBaseClass{
 	NewAccountPage Page5 = new NewAccountPage();
 	DepositPage Page6=new DepositPage();
 	WithdrawalPage Page7=new WithdrawalPage();
-	
-	
+
+
 	public WithdrawalPageTest() {
 		super();
-		}
-	
+	}
+
 	@BeforeClass
 	public void setup() {
 		Page=new LoginPage();
@@ -36,36 +36,36 @@ public class WithdrawalPageTest extends mainBaseClass{
 		Page3=new mainBaseClass();
 		Page.openBrowser("chrome");
 		Page.lunchUrl(Page3.prop.getProperty("openurl"));
-	
- 
-	LoginPage login=PageFactory.initElements(Page3.driver, LoginPage.class);
-	login.enterUserId("mngr325429");
-	login.enterPassword("hamuved");
-	login.clickLoginBtn();
+
+
+		LoginPage login=PageFactory.initElements(Page3.driver, LoginPage.class);
+		login.enterUserId("mngr325429");
+		login.enterPassword("hamuved");
+		login.clickLoginBtn();
 	}
 
-	
-	 
-    @Test(priority=1)
-    public void clickNewWithdrawalTest() {
-    	Page1.clickNewWithdrawalPage();
-    }
-    
-    @Test(priority=2)
-    public void NewWithdrawalPage() {
-    	Page7.EnterAccountNo();
-    	Page7.EnterAmount();
-    	Page7.EnterDescription();
-    }
-    
-    @Test(priority=3)
-    public void clickSubmitBut() {
-    	Page7.clicksubmitBt();
-    }
-    
-    @AfterClass
-    public void teardown() {
-    	driver.quit();
-    }
-    
+
+
+	@Test(priority=1)
+	public void clickNewWithdrawalTest() {
+		Page1.clickNewWithdrawalPage();
+	}
+
+	@Test(priority=2)
+	public void NewWithdrawalPage() {
+		Page7.EnterAccountNo();
+		Page7.EnterAmount();
+		Page7.EnterDescription();
+	}
+
+	@Test(priority=3)
+	public void clickSubmitBut() {
+		Page7.clicksubmitBt();
+	}
+
+	@AfterClass
+	public void teardown() {
+		driver.quit();
+	}
+
 }

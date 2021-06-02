@@ -13,7 +13,7 @@ import com.KickOff.Pages.NewCustomerPage;
 import com.mainBaseClass.mainBaseClass;
 
 public class DepositPageTest extends mainBaseClass {
-	
+
 
 	LoginPage Page;
 	HomePage Page1;
@@ -21,11 +21,11 @@ public class DepositPageTest extends mainBaseClass {
 	NewCustomerPage Page4 = new NewCustomerPage(); 
 	NewAccountPage Page5 = new NewAccountPage();
 	DepositPage Page6=new DepositPage();
-	
+
 	public DepositPageTest() {
 		super();
-		}
-	
+	}
+
 	@BeforeClass
 	public void setup() {
 		Page=new LoginPage();
@@ -33,37 +33,37 @@ public class DepositPageTest extends mainBaseClass {
 		Page3=new mainBaseClass();
 		Page.openBrowser("chrome");
 		Page.lunchUrl(Page3.prop.getProperty("openurl"));
-	
- 
-	LoginPage login=PageFactory.initElements(Page3.driver, LoginPage.class);
-	login.enterUserId("mngr325429");
-	login.enterPassword("hamuved");
-	login.clickLoginBtn();
+
+
+		LoginPage login=PageFactory.initElements(Page3.driver, LoginPage.class);
+		login.enterUserId("mngr325429");
+		login.enterPassword("hamuved");
+		login.clickLoginBtn();
 	}
-	
-	
-	 @Test(priority=1)
-	    public void clickNewDepositTest() {
-	    	Page6.clickNewDepositPage();
-	    }
-	 
-	 @Test(priority=2)
-	 public void NewDeposit() {
-		 Page6.EnterAccountNo();
-		 Page6.EnterAmount();
-		 Page6.EnterDescription();
-	 }
-	 
-	 @Test(priority=3)
-	 public void clickSubmitBt() {
-		 Page6.clicksubmitBt();
-	 }
-	 
-	 @AfterClass
-	 public void teardown() {
-		 driver.quit();
-	 }
-	    
-	
+
+
+	@Test(priority=1)
+	public void clickNewDepositTest() {
+		Page6.clickNewDepositPage();
+	}
+
+	@Test(priority=2)
+	public void NewDeposit() {
+		Page6.EnterAccountNo();
+		Page6.EnterAmount();
+		Page6.EnterDescription();
+	}
+
+	@Test(priority=3)
+	public void clickSubmitBt() {
+		Page6.clicksubmitBt();
+	}
+
+	@AfterClass
+	public void teardown() {
+		driver.quit();
+	}
+
+
 
 }

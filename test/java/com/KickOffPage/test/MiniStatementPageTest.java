@@ -23,11 +23,11 @@ public class MiniStatementPageTest extends mainBaseClass{
 	NewAccountPage Page5 = new NewAccountPage();
 	DepositPage Page6=new DepositPage();
 	MiniStatementPage Page7= new MiniStatementPage();
-	
+
 	public MiniStatementPageTest() {
 		super();
-		}
-	
+	}
+
 	@BeforeClass
 	public void setup() {
 		Page=new LoginPage();
@@ -35,28 +35,28 @@ public class MiniStatementPageTest extends mainBaseClass{
 		Page3=new mainBaseClass();
 		Page.openBrowser("chrome");
 		Page.lunchUrl(Page3.prop.getProperty("openurl"));
-	
- 
-	LoginPage login=PageFactory.initElements(Page3.driver, LoginPage.class);
-	login.enterUserId("mngr325429");
-	login.enterPassword("hamuved");
-	login.clickLoginBtn();
+
+
+		LoginPage login=PageFactory.initElements(Page3.driver, LoginPage.class);
+		login.enterUserId("mngr325429");
+		login.enterPassword("hamuved");
+		login.clickLoginBtn();
 	}
-	
-	 @Test(priority=1)
-    public void clickMiniStatementPageTest() {
-    	Page7.clickMiniStatementPage();
-	 }
-	 
-    	@Test(priority=2)
-	 public void EnterAccountNo() {
-		 Page7.EnterAccountNo();
-		 Page7.clicksubmitBt();
-	 }
-    	
-	 @AfterClass
-	 public void teardown() {
-		 driver.quit();
-	 }
+
+	@Test(priority=1)
+	public void clickMiniStatementPageTest() {
+		Page7.clickMiniStatementPage();
+	}
+
+	@Test(priority=2)
+	public void EnterAccountNo() {
+		Page7.EnterAccountNo();
+		Page7.clicksubmitBt();
+	}
+
+	@AfterClass
+	public void teardown() {
+		driver.quit();
+	}
 }
 
