@@ -1,5 +1,7 @@
 package com.KickOff.Pages;
 
-public class Constant {
+import com.mainBaseClass.mainBaseClass;
+
+public class Constant extends mainBaseClass{
 
 }
